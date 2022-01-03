@@ -26,3 +26,6 @@
     FROM emp ORDER BY Years_in_Company;
 14. SELECT First_Name,Last_Name FROM emp ORDER BY First_Name ASC, Last_Name ASC
 15. SELECT \* FROM emp ORDER BY Weight_in_Kgs ASC, Age_in_Years
+
+16. select Country,COUNT(DISTINCT event) as ct from summer GROUP BY Country HAVING ct>100 ORDER BY ct ASC
+17. select Athlete from summer where Country="CAN" GROUP BY Athlete count(distinct medal) = 3
