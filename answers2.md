@@ -93,4 +93,5 @@ WITH first AS (SELECT avg(duration) as sumDuration,director FROM movies where la
 select distinct production_company,year as firstYear,sumDuration from first f JOIN movies m ON (f.director = m.director) ORDER BY sumDuration DESC
 
 
+
 ```
