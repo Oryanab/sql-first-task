@@ -28,4 +28,5 @@
 15. SELECT \* FROM emp ORDER BY Weight_in_Kgs ASC, Age_in_Years
 
 16. select Country,COUNT(DISTINCT event) as ct from summer GROUP BY Country HAVING ct>100 ORDER BY ct ASC
-17. select Athlete from summer where Country="CAN" GROUP BY Athlete count(distinct medal) = 3
+17. select Athlete from summer where Country="CAN" GROUP BY Athlete HAVING count(distinct medal) = 3
+18.

@@ -89,8 +89,17 @@ select title, males_vote_count,females_vote_count, females_avg_vote - males_avg_
 13.
 
 ```
-WITH first AS (SELECT avg(duration) as sumDuration,director FROM movies where language= "English" GROUP BY director ORDER BY sumDuration DESC)
-select distinct production_company,year as firstYear,sumDuration from first f JOIN movies m ON (f.director = m.director) ORDER BY sumDuration DESC
+SELECT title,year,director,(select avg(m.year) from movies as m where m.director=movies.director) as director_avg_duration,production_company, (select m2.year from movies as m2 where m2.production_company=movies.production_company order by year asc limit 1) as production_company_first_movie_year
+FROM `movies`
+WHERE Language='English'
+LIMIT 50
+
+```
+
+14.
+
+```
+SELECT ()
 
 
 
